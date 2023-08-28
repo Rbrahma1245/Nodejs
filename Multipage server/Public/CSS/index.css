@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar{
+    background: rgb(59, 59, 59);
+    display: flex;
+    align-items: center; 
+    color: white;
+}
+
+.nav-link a{
+    color: white;
+    padding: 10px;
+    
+    
+}
+
+a:link{
+    text-decoration: none;
+}
+a:visited{
+    text-decoration: none;
+}
+button{
+    background-color: rgb(16, 151, 14);
+    padding: 10px;
+    color: wheat;
+    width: 100px;
+}
+
+
+.main{
+    text-align: center;
+    margin-top: 20px;
+     color: rgb(234, 22, 153);
+}
