@@ -15,15 +15,88 @@
         <a href="/">HOME</a>
         <a href="/about">ABOUT</a>
         <a href="/contact">CONTACT US</a>
-        <a href="/login"> <button>LOGIN</button> </a>
+       <button class="login" onclick="handleLogin()">LOGIN</button>
       </div>
     </div>
 
 
 
-    <div class="main">
-      <h1>WELCOME TO HOME PAGE</h1>
+    <div class="container">
+      <h1 class="main">WELCOME TO HOME PAGE</h1>
+
+      <!-- LOGIN -->
+
+      <div class="form-box">
+        <h1 id="title">LOGIN</h1>
+        <form class="login-form">
+          <div class="input-group">
+            <div class="input-field" id="nameField">
+              <input type="email" placeholder="Enter your email"/>
+            </div>
+          
+            <div class="input-field">
+              <input type="password" placeholder="Enter your Password"/>
+            </div>
+
+            <button class="signup" > LOGIN </button>
+          </br>
+        </br>
+          <p >Don't have an account ? <a href="#" id="signupBtn">Sign UP</a></p>
+          </div>
+        </form>
+
+  
+
+    <!-- SIGN UP -->
+     
+        <form class="signup-form">
+          <div class="input-group">
+            <div class="input-field" id="nameField">
+              <input type="text" placeholder="Enter your name"/>
+            </div>
+            <div class="input-field">
+              <input type="email" placeholder="Enter your email"/>
+            </div>
+            <div class="input-field">
+              <input type="password" placeholder="Enter your Password"/>
+            </div>
+
+            <button class="signup" > SIGN UP </button>
+          </br>
+        </br>
+          <p >Alredy have an account ? <a href="#" >LOGIN</a></p>
+          </div>
+        </form>
+
+      </div>
+
     </div>
+
+
+
+
+    <script>
+
+      let container= document.querySelector('.container')
+
+      let signupBtn= document.getElementById('signupBtn')
+      let loginBtn= document.getElementById('loginBtn')
+      let nameField= document.getElementById('nameField')
+      let title= document.getElementById('title')
+
+      function handleLogin(){
+        container.classList.add("showForm")
+      }
+
+      signupBtn.addEventListener("click",()=> {
+        title.innerText= " SIGN UP"
+
+        container.classList.add()
+      })
+
+
+
+    </script>
     
   </body>
 </html>

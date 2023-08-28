@@ -12,7 +12,6 @@ const server = http.createServer((req, res) => {
   if (method == "GET") {
     if (url == "/") {
       let data = readFileSync(join(__dirname, "public", "index.html"), "utf-8");
-
       res.write(data);
     }
 
@@ -34,11 +33,9 @@ const server = http.createServer((req, res) => {
         let data = readFileSync(join(__dirname, "public", "Pages", "login.html"),"utf-8");
         res.write(data);
       }
-      else{
-        res.write("<h1> PAGE NOT FOUND</h1>")
-      }
-
-      
+      else {
+        // res.write("<h1> PAGE NOT FOUND</h1>")
+      }   
 
   }
 
