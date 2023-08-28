@@ -29,10 +29,7 @@ const server = http.createServer((req, res) => {
         let data = readFileSync(join(__dirname, "public", "Pages", "Contactus.html"),"utf-8");
         res.write(data);
       }
-      if (url == "/login") {
-        let data = readFileSync(join(__dirname, "public", "Pages", "login.html"),"utf-8");
-        res.write(data);
-      }
+     
       else {
         // res.write("<h1> PAGE NOT FOUND</h1>")
       }   

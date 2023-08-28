@@ -15,15 +15,101 @@
           <a href="/">HOME</a>
           <a href="/about">ABOUT</a>
           <a href="/contact">CONTACT US</a>
-         <a href="/login"> <button>LOGIN</button> </a>
+          <button class="login" onclick="handleLogin()">LOGIN</button>
+        
         </div>
       </div>
     
 
 
-      <div class="main">
+      
+        <div class="container">
         <h1>THIS IS CONTACT US PAGE</h1>
+        <div class="form-box">
+
+          <p class="closeForm" onclick="closeForm()">X</p>
+          <h2 id="title">LOGIN</h2>
+  
+          <form class="login-form">
+              <div class="input-field" id="nameField">
+                <input type="email" placeholder="Enter your email"/>
+              </div>
+            
+              <div class="input-field">
+                <input type="password" placeholder="Enter your Password"/>
+              </div>
+  
+              <button class="signup" > LOGIN </button>
+              </br>
+              </br>
+               <p >Don't have an account ? <a href="#" id="signupBtn">Sign up</a></p>
+          </form>
+  
+    
+      <!-- SIGN UP -->
+       
+          <form class="signup-form">
+              <div class="input-field" id="nameField">
+                <input type="text" placeholder="Enter your name"/>
+              </div>
+              <div class="input-field">
+                <input type="email" placeholder="Enter your email"/>
+              </div>
+              <div class="input-field">
+                <input type="password" placeholder="Enter your Password"/>
+              </div>
+  
+              <button class="signup" > SIGN UP </button>
+              </br>
+              </br>
+                <p >Alredy have an account ? <a href="#" id="loginBtn">Login</a></p>
+          </form>
+  
+      
+  
       </div>
+  
+  
+  
+  
+      <script>
+  
+        let container= document.querySelector('.container')
+  
+        let formBox= document.querySelector('.form-box')
+  
+  
+  
+        let signupBtn= document.getElementById('signupBtn')
+        let loginBtn= document.getElementById('loginBtn')
+  
+  
+        let loginForm = document.querySelector('.login-form')
+       
+  
+        let title= document.getElementById('title')
+  
+        function handleLogin(){
+          formBox.classList.add("showForm")
+        }
+  
+        function closeForm(){
+          formBox.classList.remove("showForm")
+        }
+  
+        signupBtn.addEventListener("click",()=> {
+          title.innerText= " SIGN UP"
+          container.classList.add("active")
+        })
+  
+        loginBtn.addEventListener("click",()=> {
+          title.innerText= " LOGIN"
+          container.classList.remove("active")
+        })
+  
+  
+  
+      </script>
     
 </body>
 </html>
